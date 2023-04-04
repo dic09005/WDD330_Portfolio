@@ -1,0 +1,116 @@
+/* Small CSS */ 
+
+body {
+    background-color: #ebebeb;
+}
+
+/* Main index.html */
+
+main {
+    padding-top: 1em;
+    margin: 1em;
+    border: 3px solid black;    
+    background-color: rgb(190, 107, 20, 0.3);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+figure {
+    position: fixed;
+    top: 1.75em;
+    right: 1em;
+}
+
+main.game {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+    
+svg {
+    width: 100px;
+    height: 100px;
+}
+  
+#text {
+    height: 100%;
+    padding: 1em;
+    padding-bottom: 10px;
+}
+
+.guessed {
+    height: 100%;
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+section {
+    display: flex;
+    flex-direction: column;
+}
+  
+#head, #arm-l, #arm-r, #leg-l, #leg-r, #torso, #eye-l, #eye-r, #mouth {
+    display: none;
+}
+    
+#letters {
+    font-size: 50px;
+}
+  
+.letterBtn {
+    background-color: #ce9deaf8;
+    padding: .5em;
+    margin: .5em;
+}
+  
+#prompt {
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+#lettersPicked {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#mistakesleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+select, button {
+    padding: .25em;
+}
+
+section svg {
+    align-self: center;
+}
+
+h2, p {
+    color: black;
+}
+
+@media only screen and (min-width: 600px) {
+    svg {
+        width: 300px;
+        height: 300px;
+    }
+
+    #text {
+        height: 100%;
+        padding: 50px;
+        padding-bottom: 10px;
+    }
+
+    main {
+        padding: 2em;
+    }
+
+}

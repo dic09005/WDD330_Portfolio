@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather or not</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gamestyle.css" />
+    <script src="js/view.js" defer></script>
+    <script src="js/model.js" defer></script>
+</head>
+<body class="home game">
+    <header>
+        <h2>Weather or Not!</h2>
+        <p>...This is the "not" part</p>
+        <figure>
+            <img src="images/sunny.png" alt="weather icon" id="weather-icon"/>
+        </figure>
+        <nav>
+            <button id="hamburgerBtn" onclick="toggleMenu()"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li class="homelink">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="gamelink">
+                    <a href="game.html">Game</a>
+                </li>
+                <li class="aboutlink">
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="game">
+        <div class="gameBox">
+            <button id="play">Load Game</button><br /><br />  
+            <p> Pick a letter to make your guesses. <br>
+                Caution, I will let you use the same letter <br> 
+                more than once, but that will cost you turns.<br> 
+                You only get ten guesses so choose wisely. <br> 
+            </p>
+        </div>
+        <div id="gameScreen">
+            <section>
+                <svg id="hangman-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 500" stroke="#000000" fill="none"><!-- This is how the SVG components are displayed -->
+                    <!-- Start with building the gallows to be displayed at the start -->
+                    <polyline stroke-width="10" stroke-miterlimit="10" points="253.996,142.899 253.996,59.666 115.663,59.666 115.663,434.999 "/>
+                            <line stroke-width="10" stroke-miterlimit="10" x1="392.33" y1="434.999" x2="8.33" y2="434.999"/>
+                    <!-- The body will be displayed using the Game Loop -->
+                    <circle id="head" stroke-width="10" stroke-miterlimit="10" cx="254.404" cy="174.26" r="29.412"/>
+                    <line id="torso" stroke-width="10" stroke-miterlimit="10" x1="254.404" y1="203.672" x2="254.404" y2="314.056"/>
+                    <line id="leg-l" stroke-width="10" stroke-miterlimit="10" x1="255.339" y1="311.094" x2="185.875" y2="406.468"/>
+                    <line id="leg-r" stroke-width="10" stroke-miterlimit="10" x1="323.46" y1="406.468" x2="253.996" y2="311.094"/>
+                    <line id="arm-l" stroke-width="10" stroke-miterlimit="10" x1="254.404" y1="229.409" x2="164.11" y2="256.834"/>
+                    <line id="arm-r" stroke-width="10" stroke-miterlimit="10" x1="254.404" y1="229.409" x2="344.699" y2="256.834"/>
+                    <circle id="eye-l" fill="#000000" cx="243.663" cy="169.333" r="3.667"/>
+                    <circle id="eye-r" fill="#000000" cx="265.663" cy="169.333" r="3.667"/>
+                    <path id="mouth" stroke-width="4" stroke-miterlimit="10" d="M245.571,190.082c0-4.879,3.955-8.833,8.833-8.833 c4.879,0,8.833,3.955,8.833,8.833"/>
+                </svg>
+                <h1 class="Alerts"></h1>
+            </section>
+            <section class="texts">
+                <div id="text">
+                    <div id="letters"></div>           
+                    <div id="prompt">
+                    <span id="guess">
+                        <label for="guessinput">Guess a letter!</label>
+                        <select id="guessinput">
+                            <option value="Select" disabled selected>Pick a Letter</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="c">C</option>
+                            <option value="d">D</option>
+                            <option value="e">E</option>
+                            <option value="f">F</option>
+                            <option value="g">G</option>
+                            <option value="h">H</option>
+                            <option value="i">I</option>
+                            <option value="j">J</option>
+                            <option value="k">K</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                            <option value="n">N</option>
+                            <option value="o">O</option>
+                            <option value="p">P</option>
+                            <option value="q">Q</option>
+                            <option value="r">R</option>
+                            <option value="s">S</option>
+                            <option value="t">T</option>
+                            <option value="u">U</option>
+                            <option value="v">V</option>
+                            <option value="w">W</option>
+                            <option value="x">X</option>
+                            <option value="y">Y</option>
+                            <option value="z">Z</option>
+                        </select> 
+                        <button id="go">Check Letter</button>
+                    </span>
+                    </div>     
+                </div>
+                <div class="guessed"> <!-- Updatable div for letters -->
+                    <h3>What you have guessed</h3>
+                    <div id="lettersPicked"></div>
+                    <br>
+                    <h3>Guesses Remaining</h3>
+                    <div id="mistakesleft">
+                        <span class="chancesLeft">10</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+      <div class="aboutMe">
+        © <span id="year"></span> | WDD330 Project | Robin Dickson | Rigby, ID
+        Last Updated |
+        <span id="timestamp"></span>
+      </div>
+    </footer>
+</body>
+</html>

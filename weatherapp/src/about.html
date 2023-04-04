@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather or not</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/view.js" defer></script>
+</head>
+<body class="about">
+    <header>
+        <h2>Weather or Not!</h2>
+        <figure>
+            <img src="images/sunny.png" alt="weather icon" id="weather-icon"/>
+        </figure>
+        <nav>
+            <button id="hamburgerBtn" onclick="toggleMenu()"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li class="homelink">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="gamelink">
+                    <a href="game.html">Game</a>
+                </li>
+                <li class="aboutlink">
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="about">
+        <h1>About this project</h1>
+        <p>My hopes and dreams were to make a fully functioning weather app. However, it did not matter how hard I tried to get the free API’s to give me the maps that I wanted I was always provided with a colorful blob… OpenWeather’s customer service team was extremely helpful however and wherever they could be but without paying for all of the upgrades I was left with what I had, colorful blobs. So, I decided to add a fun second page and nix the map page. I hope that you had some fun and I look forward to implementing the Model View Controller format more in the future.</p>
+    </main>
+    <footer>
+      <div class="aboutMe">
+        © <span id="year"></span> | WDD330 Project | Robin Dickson | Rigby, ID
+        Last Updated |
+        <span id="timestamp"></span>
+      </div>
+    </footer>
+</body>
+</html>

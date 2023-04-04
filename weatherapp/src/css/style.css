@@ -1,0 +1,217 @@
+
+
+body {
+    background-color: #ebebeb;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    padding-top: 1em;
+    margin: 1em;
+    border: 3px solid black;    
+    background-color: rgb(190, 107, 20, 0.3);
+}
+
+header {
+    height: 4em;
+    border-bottom: 3px solid black;
+    color: #be6b14;
+    background-color: #be6b14;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+    position: sticky;
+    top: 0em;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
+figure {
+    position: fixed;
+    top: 1.75em;
+    right: 1.5em;
+}
+
+figure img {
+    height: 4em;
+}
+
+/* Nav */
+
+nav {
+    position: fixed;
+    top: .25em;
+    left: .5em;
+}
+
+nav ul {
+    display: none;
+}
+
+nav ul.open {
+    display: block;
+	position: absolute;
+	background-color:rgb(116, 65, 10);
+	text-align: center;
+	z-index: 1;
+    padding-left: 0%;
+}
+
+nav ul li {
+    list-style-type: none;    
+    padding: 5px;
+    text-align: left;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .5em;
+}
+
+nav ul li.active a {
+    background-color: rgba(0,0,0,0.4);
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #56514B;
+}
+
+nav button {
+    margin: .2rem 2vw;
+    background: transparent;
+    border: none;
+    font-size: 2rem;    
+    color: white;
+}
+
+/* This chooses what span element to display */
+
+#hamburgerBtn span:nth-child(1) {
+    display: block;
+}
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+#hamburgerBtn.open span:nth-child(2) {
+    display: block;
+}
+
+footer {
+    height: 8em;
+    border-top: 3px solid black;
+    background-color: #be6b14;
+}
+
+footer div {
+    padding: 1em;
+    text-align: center;
+}
+
+div.one {
+    text-align: center;
+}
+
+div.two {
+    padding: 1.5em;
+}
+
+div.three {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section.weatherCard, section.map, section.forecastCard {
+    border: 3px solid #be6b14;
+    text-align: left;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #ebebeb;
+}
+
+section.weatherCard p {
+    text-align: left;
+    padding: 1em;
+}
+
+div.two {
+    text-align: center;
+}
+
+div.two input, div.two button {
+    margin: .5em;
+    padding: .5em;
+    box-shadow: 5px 5px rgba(0,0,0,0.1);
+}
+
+section.map img {
+    height: auto;
+    width: 100%;
+}
+
+button {
+    padding: .5em;
+}
+
+section {
+    text-align: center;
+}
+
+h2 {
+    color: black;
+}
+
+main.about h1 {
+    text-align: center;
+}
+
+main.about h1 {
+    text-align: center;
+
+}
+
+main.about p {
+    padding: 2em .25em;
+}
+
+@media only screen and (min-width: 600px) {
+
+    main {
+        padding: 2em;
+    }
+
+    section.weatherCard, section.map, section.forecastCard {
+        margin: 1em;
+    }
+
+    div.three {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 1em;
+    }
+
+    section.map {
+        padding-left: 1em;
+    }
+
+    header h2 {
+        font-size: 3em;
+    }
+
+    main.about p {
+        padding: 2em 5em;
+    }
+
+}

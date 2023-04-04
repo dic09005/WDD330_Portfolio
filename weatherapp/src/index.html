@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather or not</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/view.js" defer></script>
+</head>
+<body class="home">
+    <header>
+        <h2>Weather or Not!</h2>
+        <figure>
+            <img src="images/sunny.png" alt="weather icon" id="weather-icon"/>
+        </figure>
+        <nav>
+            <button id="hamburgerBtn" onclick="toggleMenu()"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li class="homelink">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="gamelink">
+                    <a href="game.html">Game</a>
+                </li>
+                <li class="aboutlink">
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="two">
+            <label for="zipcode">Please enter a zip code:</label>
+            <input type="text" id="zipcode" name="zipcode" pattern="(\d{5}([\-]\d{4})?)" placeholder="zip code">
+            <button type="button" onclick="saveValue()">Weather Lookup</button>
+        </div>
+        <div class="three">
+            <section class="weatherCard">
+                <h2>Your Weather</h2>
+                <p id="zip"><span></span></p>
+                <p id="city">Just tell me where it is you want to go!<span></span></p>
+                <p id="temp"><span></span></p>
+                <p id="feelslike"><span></span></p>
+                <p id="description"><span></span></p>
+                <p id="humidity"><span></span></p>
+            </section>
+            <section class="map">
+                <img id="map2" src="images/whereAmI.jpg" alt="Map">
+            </section>
+        </div>
+        <div class="four">
+            <section class="forecastCard">
+                <h2>Your Three-day Forecast</h2>
+                <br>
+                <p id="date1"><span></span></p>
+                <p id="forecast1"><span></span></p>
+                <p id="forcastFL1"></p>
+                <p id="forecastDesc1"></p>
+                <p id="forecastHum1"></p>
+                <br>
+                <p id="date2"><span></span></p>
+                <p id="forecast2"><span></span></p>
+                <p id="forcastFL2"></p>
+                <p id="forecastDesc2"></p>
+                <p id="forecastHum2"></p>
+                <br>
+                <p id="date3"><span></span></p>
+                <p id="forecast3"><span></span></p>
+                <p id="forcastFL3"></p>
+                <p id="forecastDesc3"></p>
+                <p id="forecastHum3"></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="aboutMe">
+            © <span id="year"></span> | WDD330 Web App | Robin Dickson | Rigby, ID
+            Last Updated |
+            <span id="timestamp"></span>
+        </div>
+    </footer>
+</body>
+</html>
