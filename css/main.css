@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: #d9e6f2;
+    background-color: #e9e9e9;
 }
 
 header {
@@ -43,6 +43,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 1rem;
+  padding: 2em;
   border-bottom: 1px solid rgb(70, 70, 70);
   margin-bottom: .5rem;
 }
@@ -66,7 +67,7 @@ li {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   font-size: 16px;
   height: 100%;
@@ -75,8 +76,11 @@ body {
 header, main, footer {
   margin: auto;
   padding: .75rem;
-  max-width: 45rem;
-  border-radius: 5px;
+  width: 100%;
+}
+
+main {
+  height: 60vh;
 }
 
 @media only screen and (min-width: 32.5em) {
@@ -89,9 +93,6 @@ header, main, footer {
   h2 {
       font-size: 1.5rem;
   }
-  header, main, footer {
-      border-radius: 10px;
-    }
   
     
 }
